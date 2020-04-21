@@ -1,0 +1,6 @@
+w=int(input())
+print("o...o"+"."*w+"o...o"+"."*w+"o...o"+"."*w+"ooooo"+"."*w+"o...o")
+print("o...o"+"."*w+"oo..o"+"."*w+"o...o"+"."*w+"o...."+"."*w+"oo.oo")
+print("ooooo"+"."*w+"o.o.o"+"."*w+"o...o"+"."*w+"o...."+"."*w+"o.o.o")
+print("o...o"+"."*w+"o..oo"+"."*w+"o...o"+"."*w+"o...."+"."*w+"o...o")
+print("o...o"+"."*w+"o...o"+"."*w+"ooooo"+"."*w+"ooooo"+"."*w+"o...o")

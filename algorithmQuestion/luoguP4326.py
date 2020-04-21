@@ -1,0 +1,7 @@
+ztime=input().split(":")
+stime=input().split(":")
+hour=int(stime[0])-int(ztime[0])
+minue=int(stime[1])-int(ztime[1])
+miao=int(stime[2])-int(ztime[2])
+num=int(input())
+print((hour*60*60+minue*60+miao)*num)
