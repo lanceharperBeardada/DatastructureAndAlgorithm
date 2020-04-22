@@ -37,9 +37,22 @@ class LinkList:
         _ = self._head
         count = 0
         while _ is not None:
-            count+=1
-            _=_.next
+            count += 1
+            _ = _.next
         return count
+
+    def append(self, node_value):
+        node = Node(node_value)
+        if self._head is None:
+            self._head = node
+            return
+
+        cur = self._head
+        pre = None
+        while cur is not None:
+            pre = cur
+            cur = cur.next
+        pre.next = node
 
 
 if __name__ == '__main__':
@@ -47,6 +60,8 @@ if __name__ == '__main__':
     link.add(1)
     link.add(2)
     link.add(3)
+    link.append(4)
+    link.append(5)
     link.travel()
     print(link.is_empty())
     print(link.get_size())
