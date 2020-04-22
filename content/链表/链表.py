@@ -12,7 +12,7 @@ class LinkList:
     # 这里用的是头插法
     # 每一次先让head占据node的next的空间，实际上head是一个空的，
     # 但head是存在地址的变量，相当于占位符。
-    # head=node是让head成为传入的节点，那么下一个传入节点的next指向
+    # head=node是让head成为传入的节点，那么下一个传入的节点的next指向
     # 的就是当前节点了（node.next=self._head）。
     def add(self, node_value):
         node = Node(node_value)
@@ -67,6 +67,15 @@ class LinkList:
             cur = cur.next
         pre.next = node
 
+    def search(self, value):
+        cur = self._head
+        while cur is not None:
+            if cur.item == value:
+                return True
+            else:
+                cur = cur.next
+        return False
+
 
 if __name__ == '__main__':
     link = LinkList()
@@ -78,3 +87,4 @@ if __name__ == '__main__':
     link.travel()
     print(link.is_empty())
     print(link.get_size())
+    print(link.search(20))
