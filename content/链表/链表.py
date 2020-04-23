@@ -76,6 +76,24 @@ class LinkList:
                 cur = cur.next
         return False
 
+    def insert(self, value, pos):
+        cur = self._head
+        pre = None
+        count = 0
+        node = Node(value)
+        while count != pos:
+            pre = cur
+            cur = cur.next
+            count += 1
+        pre.next = node
+        node.next = cur
+
+    def delete_node(self,pos):
+        count=0
+        cur=self._head
+        while pos != count:
+            cur=cur.next
+
 
 if __name__ == '__main__':
     link = LinkList()
@@ -88,3 +106,5 @@ if __name__ == '__main__':
     print(link.is_empty())
     print(link.get_size())
     print(link.search(20))
+    link.insert(66,2)
+    link.travel()
