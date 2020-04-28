@@ -81,18 +81,35 @@ class LinkList:
         pre = None
         count = 0
         node = Node(value)
-        while count != pos:
+        while count != pos and cur is not None:
             pre = cur
             cur = cur.next
             count += 1
-        pre.next = node
-        node.next = cur
+        if cur is None:
+            print("超出能够插入的范围了")
+            return
+        if pos == 0:
+            node.next = cur
+            self._head = node
+            return
+        else:
+            pre.next = node
+            node.next = cur
 
-    def delete_node(self,pos):
-        count=0
-        cur=self._head
+    def delete_node(self, pos):
+        count = 0
+        cur = self._head
+        pre = None
         while pos != count:
-            cur=cur.next
+            pre = cur
+            cur = cur.next
+            count += 1
+        if pos == 0:
+            self._head = cur.next
+            return
+        else:
+            pre.next=cur.next
+            cur = cur.next
 
 
 if __name__ == '__main__':
@@ -106,5 +123,10 @@ if __name__ == '__main__':
     print(link.is_empty())
     print(link.get_size())
     print(link.search(20))
-    link.insert(66,2)
+    link.insert(66, 0)
+    link.insert(65, 1)
+    link.travel()
+    print("删除节点")
+    link.delete_node(0)
+    link.delete_node(2)
     link.travel()
