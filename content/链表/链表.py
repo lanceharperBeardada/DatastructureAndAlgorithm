@@ -108,7 +108,7 @@ class LinkList:
             self._head = cur.next
             return
         else:
-            pre.next=cur.next
+            pre.next = cur.next
             cur = cur.next
 
 
