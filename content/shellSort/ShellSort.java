@@ -1,7 +1,7 @@
 /*
  * @Author: your beardada
  * @Date: 2021-04-09 08:27:31
- * @LastEditTime: 2021-04-09 08:45:28
+ * @LastEditTime: 2021-04-12 08:26:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \content\shellSort\ShellSort.java
@@ -10,20 +10,18 @@ package shellSort;
 
 public class ShellSort {
   public static void shellSort(int[] list) {
-    int n = 1;
-    int h = list.length;
-    while (n < h) {
-      n = n * 3 + 1;
+    int n = list.length / 3;
+    int h = 1;
+    while (h < n) {
+      h = h * 3 + 1;
     }
-
-    for (; n >= 1; n = n / 3) {
-      for (int i = n; i < h; i++) {
-        for (int j = i; j >= n; j -= n) {
-          if (list[j] < list[j - n]) {
-            swap(list, j, j - n);
-          }
+    while (h >= 1) {
+      for (int i = h; i < list.length; i++) {
+        for (int j = i; j >= h && list[j] < list[j - h]; j -= h) {
+          swap(list, j, j - h);
         }
       }
+      h /= 3;
     }
   }
 
