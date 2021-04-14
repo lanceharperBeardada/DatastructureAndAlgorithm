@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-04-13 08:47:34
- * @LastEditTime: 2021-04-13 09:05:35
+ * @LastEditTime: 2021-04-14 13:10:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \content\mergeSort\MergeSort.java
@@ -37,8 +37,9 @@ public class MergeSort {
 
   private static void mergeSort(int[] list, int li, int hi) {
     int mid = (li + hi) / 2;
-    if (hi <= li) return;
-      mergeSort(list, li, mid);
+    if (hi <= li)
+      return;
+    mergeSort(list, li, mid);
     mergeSort(list, mid + 1, hi);
     merge(list, li, hi, mid);
   }
