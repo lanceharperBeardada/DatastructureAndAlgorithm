@@ -1,0 +1,71 @@
+
+// https://github.com/Microsoft/vscode-cpptools/blob/master/launch.md
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch StackDemo",
+            "request": "launch",
+            "mainClass": "content.stack.StackDemo",
+            "projectName": "DatastructureAndAlgorithm_e134375"
+        },
+        {
+            "type": "java",
+            "name": "Launch Demo",
+            "request": "launch",
+            "mainClass": "content.Demo",
+            "projectName": "DatastructureAndAlgorithm_e134375"
+        },
+        {
+            "type": "java",
+            "name": "Launch SelectionSort",
+            "request": "launch",
+            "mainClass": "content.selectionSort.SelectionSort",
+            "projectName": "DatastructureAndAlgorithm_e134375"
+        },
+        {
+            "type": "java",
+            "name": "Launch SelectionSort",
+            "request": "launch",
+            "mainClass": "selectionSort.SelectionSort",
+            "projectName": "DatastructureAndAlgorithm_e134375"
+        },
+        {
+            "type": "java",
+            "name": "Launch SelectionSort",
+            "request": "launch",
+            "mainClass": "content.排序_选择排序.selectionSort.SelectionSort",
+            "projectName": "DatastructureAndAlgorithm_e134375"
+        },
+        {
+            "type": "java",
+            "name": "Launch SelectionSort",
+            "request": "launch",
+            "mainClass": "content.排序_选择排序.SelectionSort",
+            "projectName": "DatastructureAndAlgorithm_e134375"
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "internalConsoleOptions": "neverOpen",
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "Compile"
+        }
+    ]
+}
