@@ -1,4 +1,4 @@
-package leetcode1720;
+
 
 public class Leetcode1720 {
   public int[] decode(int[] encoded, int first) {
